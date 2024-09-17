@@ -23,9 +23,9 @@ for h in range(image_height):
         r, g, b = pixels_data[h, w]
 
 #Modifying new pixel value by adding generated number
-r = min(r + generated_number, 285)
-g = min(g + generated_number, 285)
-b = min(b + generated_number, 285)
+r = min(r + generated_number, 255)
+g = min(g + generated_number, 255)
+b = min(b + generated_number, 255)
 
 #Save new pixel values
 pixels_data[h, w] = (r, g, b)
