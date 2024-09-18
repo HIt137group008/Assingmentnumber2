@@ -23,7 +23,6 @@ def modify_dict():
 	my_dict['key4'] = local_variable
 # modify_dict(5) was changed to modify_dict() because it does not accept with integers as a parameter. It's unclear what modify_dict(5)
 #was trying to do, so it seemed best to get rid of the impeding integer.
-# key4 was renamed to key1 for legibility because keys 1-3 were removed.
 modify_dict()
 
 def update_global():
