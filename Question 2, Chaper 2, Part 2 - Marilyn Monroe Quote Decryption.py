@@ -3,19 +3,15 @@ def decrypt(text, key):
     for char in text:
         if char.isalpha():
             shifted = ord(char) - key
-            if char.islower():
-                if shifted < ord('a'):
-                    shifted += 26
-            elif char.isupper():
-                if shifted < ord('A'):
-                    shifted += 26
+            if shifted < ord('A'):
+                shifted += 26
             decrypted_text += chr(shifted)
         else:
             decrypted_text += char
     return decrypted_text
 
 key = 13
-#Input encrypted code into the "" below.
+#Input cryptogram into the "" below.
 encrypted_code = "VZ FRYSVFU VZCNGVRAG NAQ N YVGGYR VAFRPHER V ZNXR ZVFGNXRF V NZ BHG BS PBAGEBY NAQNG GVZRF UNEQ GB UNAQYR OHG VS LBH PNAG UNAQYR ZR NG ZL JBEFG GURA LBH FHER NF URYYQBAG QRFREIR ZR NG ZL ORFG ZNEVYLA ZBAEBR"
 decrypted_code = decrypt(encrypted_code, key)
 print(decrypted_code)
